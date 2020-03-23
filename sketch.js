@@ -62,8 +62,8 @@ function Symbol(x, y, speed, first, opacity) {
 
 function Stream() {
   this.symbols = [];
-  this.totalSymbols = round(random(5, 35));
-  this.speed = random(5, 22);
+  this.totalSymbols = round(random(5, 70));
+  this.speed = random(5, 15);
 
   this.generateSymbols = function(x, y) {
     var opacity = 255;
@@ -87,9 +87,9 @@ function Stream() {
   this.render = function() {
     this.symbols.forEach(function(symbol) {
       if (symbol.first) {
-        fill(140, 255, 170, symbol.opacity);
+        fill(100, 150, 60, symbol.opacity);
       } else {
-        fill(0, 255, 70, symbol.opacity);
+        fill(27, 42, 53, symbol.opacity);
       }
       text(symbol.value, symbol.x, symbol.y);
       symbol.rain();
