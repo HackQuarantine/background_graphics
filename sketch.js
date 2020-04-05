@@ -22,7 +22,7 @@ function setup() {
 }
 
 function draw() {
-  background(0, 150);
+  background(11, 15, 36);
   streams.forEach(function(stream) {
     stream.render();
   });
@@ -62,8 +62,8 @@ function Symbol(x, y, speed, first, opacity) {
 
 function Stream() {
   this.symbols = [];
-  this.totalSymbols = round(random(5, 70));
-  this.speed = random(5, 15);
+  this.totalSymbols = round(random(5, 40));
+  this.speed = random(5, 7);
 
   this.generateSymbols = function(x, y) {
     var opacity = 255;
@@ -87,9 +87,9 @@ function Stream() {
   this.render = function() {
     this.symbols.forEach(function(symbol) {
       if (symbol.first) {
-        fill(100, 150, 60, symbol.opacity);
+        fill(100, 150, 100, symbol.opacity);
       } else {
-        fill(27, 42, 53, symbol.opacity);
+        fill(61, 100, 61, symbol.opacity);
       }
       text(symbol.value, symbol.x, symbol.y);
       symbol.rain();
